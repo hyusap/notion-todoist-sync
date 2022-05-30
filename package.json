@@ -1,0 +1,15 @@
+{
+  "name": "notion-todoist-sync",
+  "version": "1.0.0",
+  "description": "a syncing tool (WIP) between notion and todoist",
+  "main": "index.js",
+  "repository": "https://github.com/citricacid2/notion-todoist-sync.git",
+  "author": "citricacid2 <61765149+citricacid2@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@doist/todoist-api-typescript": "^1.5.0",
+    "@notionhq/client": "^1.0.4",
+    "dotenv": "^16.0.1"
+  },
+  "type": "module"
+}
