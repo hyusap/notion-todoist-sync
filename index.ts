@@ -3,11 +3,12 @@ import "dotenv/config";
 import { TodoistApi } from "@doist/todoist-api-typescript";
 import { Client } from "@notionhq/client";
 
-const todoist = new TodoistApi(process.env.TODOIST_TOKEN);
+const TODOIST_TOKEN = process.env.TODOIST_TOKEN || "";
+const todoist = new TodoistApi(TODOIST_TOKEN);
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
-const database_id = process.env.NOTION_DATABASE;
+const database_id = process.env.NOTION_DATABASE || "";
 
 async function syncTasks() {
   const todoistTasks = await todoist.getTasks();
